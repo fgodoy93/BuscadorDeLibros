@@ -4,12 +4,12 @@ const btnBuscar = document.getElementById("botonBuscar")
 
 let listadoLibrosPorAutor = [];
 let librosMostrar = [];
-async function buscarLibros(autor) {
+let totalLibrosEncontrados = 0;
+async function buscarLibrosPorAutor(autor) {
     try {
         let queryString = "https://openlibrary.org/search.json?author=" + autor
         const res = await fetch(queryString)
         listadoLibrosPorAutor = await res.json()
-        // return listadoLibrosPorAutor["docs"].slice(0,10)
     } catch (error) {
         console.error("Error al cargar listado de libros por autor", error)
     }
@@ -25,6 +25,7 @@ function mostrarLibros(libros) {
             </ul>
         </div>`
     });
+    seccionLibros.innerHTML += `<p><h4>Total de libros encontrados en la base de datos para el autor ${nombreAutor.value} es: ${totalLibrosEncontrados}</h4></p>`
 }
 
 btnBuscar.addEventListener("click", () => {
@@ -34,9 +35,10 @@ btnBuscar.addEventListener("click", () => {
         alert("Por favor escribe un nombre")
         return;
     }
-    buscarLibros(nombre)
+    buscarLibrosPorAutor(nombre)
     .then(() => {
         if (listadoLibrosPorAutor["docs"].length > 0) {
+            totalLibrosEncontrados = listadoLibrosPorAutor["numFound"]
             librosMostrar = listadoLibrosPorAutor["docs"].slice(0,10)
             if (librosMostrar) {
                 mostrarLibros(librosMostrar)
