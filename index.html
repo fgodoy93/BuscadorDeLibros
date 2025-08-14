@@ -4,40 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <title>Buscador de Libros por Autor - Grupo 01</title>
 </head>
 
 <body>
 
+    <div class="container m-5 p-3 big-container">
+        <div class="container py-5">
+            <h1 class="text-center mb-5">Buscador de Libros por Autor</h1>
+            <div class="buscador-wrapper">
+                <div class="input-group mb-4">
+                    <input type="text" class="form-control" name="buscador" id="nombreAutor"
+                        placeholder="Ingresa un autor o autora literaria">
+                    <button class="btn btn-primary" id="botonBuscar">
+                        <span class="material-symbols-outlined">
+                            search
+                        </span> Buscar</button>
+                </div>
+            </div>
+        </div>
 
-    <div class="container py-5">
-        <h1 class="text-center mb-5">Buscador de Libros por Autor</h1>
-        <div class="input-group mb-4">
-            <input type="text" class="form-control" name="" id="nombreAutor">
-            <button class="btn btn-primary" id="botonBuscar">Buscar</button>
+        <div class="text-center" id="librosTotales">
+
+        </div>
+        <div class="container my-4">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="contenedorLibros">
+
+            </div>
         </div>
     </div>
-    <div class="text-center" id="librosTotales">
-
-    </div>
-    <div class="container my-4">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="contenedorLibros">
-
-        </div>
-    </div>
     </div>
 
 
-    <!-- <div class="card" style="width: 25rem;">
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item" id="autor">Autor</li>
-            <li class="list-group-item" id="titulo">Libro</li>
-            <li class="list-group-item" id="anio">Año</li>
-        </ul>
-    </div> -->
 
 
 
