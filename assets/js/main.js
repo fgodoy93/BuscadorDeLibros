@@ -19,16 +19,16 @@ function mostrarLibros(libros) {
     libros.forEach((libro) => {
         seccionLibros.innerHTML += `
     <div class="col">
-      <div class="card h-100 mb-3" style="width: 100%;">
-        <img src="..." class="card-img-top text-center" alt="Portada del libro">
+        <div class="card h-100 mb-3" style="width: 100%;">
+        <img src="https://covers.openlibrary.org/b/id/${libro.cover_i}-M.jpg" class="card-img-top text-center" alt="Portada del libro">
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Autor(es): ${libro.author_name?.join(", ") || "Desconocido"}</li>
-          <li class="list-group-item">Título: ${libro.title || "Sin título"}</li>
-          <li class="list-group-item">Año de Publicación: ${libro.first_publish_year || "N/A"}</li>
+            <li class="list-group-item">Autor(es): ${libro.author_name?.join(", ") || "Desconocido"}</li>
+            <li class="list-group-item">Título: ${libro.title || "Sin título"}</li>
+            <li class="list-group-item">Año de Publicación: ${libro.first_publish_year || "N/A"}</li>
         </ul>
-      </div>
+        </div>
     </div>
-  `
+    `
     });
     seccionLibros.innerHTML += `<p><h4>Total de libros encontrados en la base de datos para el autor ${nombreAutor.value} es: ${totalLibrosEncontrados}</h4></p>`
 }
