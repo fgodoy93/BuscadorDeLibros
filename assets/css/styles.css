@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 2rem;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -21,13 +21,16 @@ body {
     backdrop-filter: blur(12px);
 }
 
+
+/* MEDIA QUERIES - PARA ESCRITORIO */
+@media (min-width: 768px) {
+
 .big-container h1 {
     font-family: "Literata", Georgia, 'Times New Roman', Times, serif;
     font-size: 3rem;
     color: #ddd;
     text-shadow: 3px 3px 5px #000000;
 }
-
 
 #librosTotales {
     font-family: "Literata", Georgia, 'Times New Roman', Times, serif;
@@ -36,7 +39,7 @@ body {
 }
 
 input[type="text"] {
-    width: 70%;
+    width:fit-content;
     padding: 1rem 3rem;
     border: none;
     border-radius: 30px;
@@ -51,7 +54,6 @@ input[type="text"]:focus {
     outline: none;
     box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.3), 0 0 5px rgba(255, 235, 59, 0.6);
 }
-
 
 #botonBuscar {
     padding: 1rem 2rem;
@@ -72,6 +74,73 @@ input[type="text"]:focus {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
+}
+
+
+
+/* MEDIA QUERIES - PARA MOVIL */
+@media (max-width: 767px) {
+
+.big-container h1 {
+    font-family: "Literata", Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.6rem;
+    color: #ddd;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+#librosTotales {
+    font-family: "Literata", Georgia, 'Times New Roman', Times, serif;
+    color: #ddd;
+    text-shadow: 3px 3px 5px #000000;
+}
+
+input[type="text"] {
+    width:fit-content;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #fff9c4;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.25);
+    font-size: 1.2rem;
+    font-family: "Cormorant", serif;
+    font-style: italic;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(255, 235, 59, 0.6);
+}
+
+#botonBuscar {
+    /* padding: 0.5rem 0.5rem; */
+    border: none;
+    border-radius: 0 15px 15px 0;
+    background-color: chocolate;
+    font-size: 1rem;
+    font-family: "Cormorant", serif;
+    font-weight: 600;
+    font-style: italic;
+    vertical-align: middle;
+    color: #333;
+    /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); */
+    text-shadow: 1px 2px 3px #00000022;
+}
+
+#botonBuscar:hover {
+    background-color: rgb(248, 154, 87);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+    width: 0px;
+    visibility: hidden;
+}
+}
+
+
+
+
 
 .card {
     border-radius: 20px;
