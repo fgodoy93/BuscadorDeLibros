@@ -34,7 +34,6 @@ function mostrarLibros(libros) {
 }
 
 btnBuscar.addEventListener("click", () => {
-    seccionLibros.innerHTML = ""
     const nombre = nombreAutor.value.trim()
     if (!nombre) {
         alert("Por favor escribe un nombre")
@@ -42,6 +41,7 @@ btnBuscar.addEventListener("click", () => {
     }
     buscarLibrosPorAutor(nombre)
         .then(() => {
+                seccionLibros.innerHTML = ""
             if (listadoLibrosPorAutor["docs"].length > 0) {
                 totalLibrosEncontrados = listadoLibrosPorAutor["numFound"]
                 librosMostrar = listadoLibrosPorAutor["docs"].slice(0, 10)
