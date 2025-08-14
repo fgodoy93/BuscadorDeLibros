@@ -1,6 +1,7 @@
 const seccionLibros = document.getElementById("contenedorLibros")
 const nombreAutor = document.getElementById("nombreAutor")
 const btnBuscar = document.getElementById("botonBuscar")
+const conteoLibros = document.getElementById("librosTotales")
 
 let listadoLibrosPorAutor = [];
 let librosMostrar = [];
@@ -30,7 +31,7 @@ function mostrarLibros(libros) {
     </div>
     `
     });
-    seccionLibros.innerHTML += `<p><h4>Total de libros encontrados en la base de datos para el autor ${nombreAutor.value} es: ${totalLibrosEncontrados}</h4></p>`
+    conteoLibros.innerHTML += `<p><h4>Total de libros encontrados en la base de datos para el autor "${nombreAutor.value}" es: ${totalLibrosEncontrados}</h4></p>`
 }
 
 btnBuscar.addEventListener("click", () => {
@@ -42,6 +43,7 @@ btnBuscar.addEventListener("click", () => {
     buscarLibrosPorAutor(nombre)
         .then(() => {
                 seccionLibros.innerHTML = ""
+                conteoLibros.innerHTML = ""
             if (listadoLibrosPorAutor["docs"].length > 0) {
                 totalLibrosEncontrados = listadoLibrosPorAutor["numFound"]
                 librosMostrar = listadoLibrosPorAutor["docs"].slice(0, 10)
