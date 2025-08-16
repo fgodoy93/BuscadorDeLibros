@@ -19,7 +19,7 @@ async function buscarLibrosPorAutor(autor) {
 function mostrarLibros(libros) {
     libros.forEach((libro) => {
         seccionLibros.innerHTML += `
-    <div class="col">
+    <div class="col col-cards">
         <div class="card h-100 mb-3" style="width: 100%;">
         <img src="https://covers.openlibrary.org/b/id/${libro.cover_i}-M.jpg" class="card-img-top text-center portada-libro" alt="Portada del libro">
         <ul class="list-group list-group-flush">

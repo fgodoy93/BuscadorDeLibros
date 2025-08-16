@@ -19,17 +19,16 @@
 
 <body>
 
-    <div class="container m-5 p-3 big-container">
-        <div class="container p-5">
+    <div class="container big-container">
+        <div class="container small-container">
             <h1 class="text-center mb-5">Buscador de Libros por Autor</h1>
             <div class="buscador-wrapper">
-                <div class="input-group mb-4">
-                    <input type="text" class="form-control" name="buscador" id="nombreAutor"
+                <div class="d-flex flex-column flex-sm-row gap-1 mb-4">
+                    <input type="text" class="form-control flex-fill" name="buscador" id="nombreAutor"
                         placeholder="Ingresa un autor o autora literaria">
                     <button class="btn btn-primary" id="botonBuscar">
-                        <span class="material-symbols-outlined">
-                            search
-                        </span> Buscar</button>
+                        <span class="material-symbols-outlined">search</span> Buscar
+                    </button>
                 </div>
             </div>
         </div>
@@ -37,8 +36,8 @@
         <div class="text-center" id="librosTotales">
 
         </div>
-        <div class="container my-4">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 m-4" id="contenedorLibros">
+        <div class="container container-cards my-4">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 align-center" id="contenedorLibros">
 
             </div>
         </div>

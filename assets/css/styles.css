@@ -16,131 +16,21 @@ body {
     border-width: 5px;
     border-style: ridge;
     border-color: chocolate;
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     backdrop-filter: blur(12px);
 }
 
-
-/* MEDIA QUERIES - PARA ESCRITORIO */
-@media (min-width: 768px) {
-
 .big-container h1 {
-    font-family: "Literata", Georgia, 'Times New Roman', Times, serif;
-    font-size: 3rem;
-    color: #ddd;
-    text-shadow: 3px 3px 5px #000000;
-}
-
-#librosTotales {
-    font-family: "Literata", Georgia, 'Times New Roman', Times, serif;
-    color: #ddd;
-    text-shadow: 3px 3px 5px #000000;
-}
-
-input[type="text"] {
-    width:fit-content;
-    padding: 1rem 3rem;
-    border: none;
-    border-radius: 30px;
-    background-color: #fff9c4;
-    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.25);
-    font-size: 2.2rem;
-    font-family: "Cormorant", serif;
-    font-style: italic;
-}
-
-input[type="text"]:focus {
-    outline: none;
-    box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.3), 0 0 5px rgba(255, 235, 59, 0.6);
-}
-
-#botonBuscar {
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 0 30px 30px 0;
-    background-color: chocolate;
-    font-size: 2rem;
-    font-family: "Cormorant", serif;
-    font-weight: 700;
-    font-style: italic;
-    color: #333;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    text-shadow: 1px 2px 3px #00000022;
-}
-
-#botonBuscar:hover {
-    background-color: rgb(248, 154, 87);
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-}
-
-
-
-/* MEDIA QUERIES - PARA MOVIL */
-@media (max-width: 767px) {
-
-.big-container h1 {
-    font-family: "Literata", Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.6rem;
-    color: #ddd;
+    font-family: "Literata", Georgia, 'Times New Roman', Times, serif; 
+    font-size: 3rem; 
+    color: #ddd; 
     text-shadow: 1px 1px 3px #000000;
 }
 
-#librosTotales {
-    font-family: "Literata", Georgia, 'Times New Roman', Times, serif;
-    color: #ddd;
-    text-shadow: 3px 3px 5px #000000;
+.small-container {
+    padding: 4rem;
 }
-
-input[type="text"] {
-    width:fit-content;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 15px;
-    background-color: #fff9c4;
-    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.25);
-    font-size: 1.2rem;
-    font-family: "Cormorant", serif;
-    font-style: italic;
-}
-
-input[type="text"]:focus {
-    outline: none;
-    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(255, 235, 59, 0.6);
-}
-
-#botonBuscar {
-    /* padding: 0.5rem 0.5rem; */
-    border: none;
-    border-radius: 0 15px 15px 0;
-    background-color: chocolate;
-    font-size: 1rem;
-    font-family: "Cormorant", serif;
-    font-weight: 600;
-    font-style: italic;
-    vertical-align: middle;
-    color: #333;
-    /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); */
-    text-shadow: 1px 2px 3px #00000022;
-}
-
-#botonBuscar:hover {
-    background-color: rgb(248, 154, 87);
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-
-.material-symbols-outlined {
-    width: 0px;
-    visibility: hidden;
-}
-}
-
-
-
-
 
 .card {
     border-radius: 20px;
@@ -149,23 +39,186 @@ input[type="text"]:focus {
     background-color: #fff8e1;
 }
 
+.col-cards{
+    margin-bottom: 1.5rem;
+}
 
-    .list-group-item {
-        background-color: transparent;
-        font-family: "Cormorant", serif;
-        font-size: 1.3rem;
-        color: #4e342e;
-        border: none;
-        padding: 0.75rem 1rem;
-    }
+.list-group-item {
+    background-color: transparent;
+    font-family: "Cormorant", serif;
+    font-size: 1.2rem;
+    color: #4e342e;
+    border: none;
+    padding: 0.75rem 1rem;
+}
 
-    .list-group-item:not(:last-child) {
-        border-bottom: 1px solid #ffe0b2;
-    }
+.list-group-item:not(:last-child) {
+    border-bottom: 1px solid #ffe0b2;
+}
+
+.portada-libro {
+    width: 100%;
+    height: 25rem; 
+    max-height: 25rem;
+    object-fit: contain;
+    border-bottom: 1px solid #ddd; 
+}
+
+input[type="text"] {
+    font-size: 1.5rem;
+    padding: 0.75rem 1.5rem; 
+    border: none; 
+    border-radius: 15px; 
+    background-color: #fff9c4; 
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.25); 
+    font-family: "Cormorant", serif; 
+    font-style: italic;
+}
+
+input[type="text"]:focus { 
+    outline: none; 
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(255, 235, 59, 0.6); 
+}
+
+#botonBuscar {
+    border: none; 
+    border-radius: 15px; 
+    background-color: chocolate; 
+    font-size: 1.2rem; 
+    font-family: "Cormorant", serif; 
+    font-weight: 600; 
+    font-style: italic; 
+    vertical-align: middle; 
+    color: #333; 
+    text-shadow: 1px 2px 3px #00000022;
+    padding: 0.75rem 1.5rem;
+    width: 25%;
+}
+
+#botonBuscar:hover { 
+    background-color: rgb(248, 154, 87); 
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); 
+    cursor: pointer; 
+}
+
+#librosTotales { 
+    font-family: "Literata", Georgia, 'Times New Roman', Times, serif; 
+    color: #ddd; 
+    text-shadow: 3px 3px 5px #000000; 
+    font-size: 1.5rem;
+}
+
+/* TABLETS */
+@media (max-width: 992px) {
+.big-container h1 {
+    font-family: "Literata", Georgia, 'Times New Roman', Times, serif; 
+    font-size: 2rem; 
+    color: #ddd; 
+    text-shadow: 1px 1px 3px #000000;
+}
+
+input[type="text"] {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem; 
+    border: none; 
+    border-radius: 15px 15px; 
+    background-color: #fff9c4; 
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.25); 
+    font-size: 1.2rem; 
+    font-family: "Cormorant", serif; 
+    font-style: italic;
+}
+
+#botonBuscar {
+    border: none; 
+    border-radius: 15px 15px; 
+    background-color: chocolate; font-size: 1rem; 
+    font-family: "Cormorant", serif; font-weight: 600; 
+    font-style: italic; 
+    vertical-align: middle; 
+    color: #333; 
+    text-shadow: 1px 2px 3px #00000022;
+    width: 50%;
+}
+
+.portada-libro {
+    height: 18rem;
+}
+
+}
+
+/* TELEFONOS */
+@media (max-width: 576px) {
+
+.big-container h1{
+    font-family: "Literata", Georgia, 'Times New Roman', Times, serif; 
+    font-size: 1.6rem; 
+    color: #ddd; 
+    text-shadow: 1px 1px 3px #000000; 
+}
+
+#librosTotales { 
+    font-family: "Literata", Georgia, 'Times New Roman', Times, serif; 
+    color: #ddd; 
+    text-shadow: 3px 3px 5px #000000; 
+}
+
+input[type="text"] {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem; 
+    border: none; 
+    border-radius: 15px; 
+    background-color: #fff9c4; 
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.25); 
+    font-size: 1.2rem; 
+    font-family: "Cormorant", serif; 
+    font-style: italic;
+}
+
+input[type="text"]:focus { 
+    outline: none; 
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(255, 235, 59, 0.6); 
+}
+
+#botonBuscar {
+    border: none; 
+    border-radius: 15px 15px; 
+    background-color: chocolate; font-size: 1rem; 
+    font-family: "Cormorant", serif; font-weight: 600; 
+    font-style: italic; 
+    vertical-align: middle; 
+    color: #333; 
+    text-shadow: 1px 2px 3px #00000022;
+    width: 100%;
+}
+
+#botonBuscar:hover { 
+    background-color: rgb(248, 154, 87); 
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); 
+    cursor: pointer; }
+
+.small-container{
+    padding: .3rem;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.container-cards {
+    margin: 0 auto;
+    max-width: 100%;
+    align-items: center;
+}
+
+#contenedorLibros {
+    margin-top: 1rem;
+    gap: 1.5rem;
+}
+
+.card {
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+}
 
 
-    .portada-libro {
-        height: 25rem;
-        object-fit: contain;
-        border-bottom: 1px solid #ddd;
-    }
